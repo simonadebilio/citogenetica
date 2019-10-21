@@ -787,10 +787,6 @@ A cosa serve costruire una mappa?
 
 Questi sono approcci fondamentali per completare le informazioni statistiche che vengono dal mappaggio dei genomi con le tecniche di NGS, che hanno l’enorme limite di essere approcci statistici che vanno verificati. A tal proposito di si parla si \textbf{dry laboratory approches} e \textbf{wet laboratory approches}. I primi, quelli in asciutto, sono quelli fatti con approcci bioinformatici analizzando banche dati, si basano su studi probabilistici che hanno bisogno di verifiche in bagnato, cioè sperimentali, in laboratorio.
 
-
-
-\section{Metodi di localizzazione genica nell'uomo}
-
 Vediamo una panoramica dei metodi classici:
 \begin{enumerate} 
 \item \textbf{Mappaggio genetico (statistico)}
@@ -819,10 +815,10 @@ Quindi, non potendo programmare gli incroci, le analisi di linkage nell’uomo c
 
 Le tecniche di ibridazione in situ, di ibridazione di cellule somatiche e di mappaggio fisico sono altamente complementari. Le prime due arrivano a una capacità di risoluzione che si avvicina alla singola base e dà informazioni anche di tipo architettonico (cosa c’è sopra, sotto, destra ecc..)
 
-\subsection{Le analisi di linkage}
+\section{Le analisi di linkage}
 Questa tecnica consiste nello studiare nelle famiglie la co-segregazione di un gene malattia e di un marcatore. È una tecnica utile per identificare l’aplotipo, cioè la sequenza sul cromosoma legata alla trasmissione della malattia. Questo permetterà di studiare i polimorfismi del DNA e in base alla presenza o assenza di un polimorfismo si può capire se l’individuo è portatore del gene malattia o meno. Ciò è importante per scopi diagnostici, per la consulenza genetica e per lo studio nelle popolazioni dell’incidenza di una particolare mutazione. Nello studio di malattie ereditarie ma anche del cancro ci permetterà di sapere qual è la mutazione più frequente in quella particolare popolazione, e quindi cercare prima quella.
 
-\subsection{Ibridazione di cellule somatiche} 
+\section{Ibridazione di cellule somatiche} 
 Nei mammiferi le cellule somatiche sono così altamente differenziate che difficilmente si adattano ad essere coltivate in vitro (non si replicano o lo fanno occasionalmente in risposta a un qualche stress o danno). Questi approcci complessivamente prendono il nome di \emph{``genetica di cellule somatiche''}.
 
 Mentre con organismi quali lieviti e batteri è facile fare incroci e riconoscere rapporti di dominanza grazie agli svariati marcatori metabolici e alle capacità proliferative di queste cellule, nei mammiferi questo approccio è molto più difficile e presenta svariati limiti.\\
@@ -1203,33 +1199,259 @@ Quindi per ogni cromosoma ci chiediamo: quanti cloni hanno il cromosoma 1? E dov
 Facciamo questo per ogni cromosoma, poi riportiamo il valore di discordanza. Nel caso della nostra tabella l’unico cromosoma per cui c’era una percentuale di discordanza pari a 0 è il cromosoma 1, per cui è evidente che il gene che codifica per il carattere considerato si trova sul cromosoma 1.
 
 
+\subsection{Gli ibridi ridotti per irragiamento (Radiation Hybrids - RH)}
+
+Tramite l'utilizzo delle tabelle di discordanza si ha una localizzazione abbastanza approssimativa dei geni in quanto possiamo sì individuare su \emph{quale} cromosoma il gene sia localizzato, ma i cromosomi sono entità molto grandi che possono andare, in base alla dimensione, da 5-6 Mb fino a 15-20 Mb.
+
+La tecnica degli ibridi ridotti per irragiamento permette di arrivare a una risoluzione/localizzazione di livello molecolare, cioè molto vicina alla sequenza (poche decine di pb).
+
+Il punto di partenza per ottenere degli ibridi ridotti per irraggiamento è quello di avere degli ibridi somatici monocromosomici tramite la tecnica della perdita cromosomica in ibridi interspecifici. 
+Per poter ottenere ibridi monocromosomici per ogni cromosoma verrà fatta una trasformazione a pioggia che causerà l'integrazione casuale del gene Neo (è il più usato) conferendo così resistenza all'antibiotico G418 (analogo della neomicina efficiente nelle cellule di mammifero).
+
+Dopo essersi assicurati che la resistenza antibiotica sia dovuta all'effettiva integrazione del gene del genoma che voglia studiare si avrà una popolazione di ibridi mista in cui ogni ibrido avrà integrato il gene in un sito diverso. 
+
+La tecnica degli ibridi ridotti per irragiamento è una tecnica di confine tra l'\emph{approccio citologico/fisico} dell'ibridazione di cellule somatiche (è definito fisico perchè permette di sapere la posizione reale, la distanza fisica del gene rispetto ad altre sequenze), e l'\emph{approccio statistico/probabilistico} dell'analisi di linkage (è definito statistico perché viene calcolata la vicincanza tra due sequenze sulla base della probabilità che queste vengano separate da un evento di ricombinazione: una sequenza sarà più vicina ad un’altra quanto minore è la frequenza di ricombinanti che ritrovo in una progenie).\\
+Con la tecnica dell'irragiamento degli ibridi tuttavia a essere presa in considerazione non è la probabilità che due sequenze vengano separate da fenomeni di ricombinazione meiotica ma \emph{la distanza viene calcolata sulla base della probabilità che due marcatori vengano separati dalla rottura indotta dalla radiazione ionizzante.}
+
+Questo viene fatto esponendo gli ibridi monocromosomici a radiazioni ionizzanti altamente clastogene (i.e. che inducono alterazioni nella struttura del cromosoma), tipicamente Raggi X. Più alta è la dose di raggi X, più piccoli saranno i frammenti in cui si spezzeranno i cromosomi della cellula irradiata.
+
+Passiamo al protocollo:\\ 
+il punto di partenza per questa tecnica sono:
+\begin{itemize}
+\item un \textbf{ibrido primario monocromosomico}
+\item una cellula di roditore.
+\end{itemize}
+
+L’ibrido monocromosomico viene esposto a una dose di raggi X, scelta in base alle necessità, che riduce tutti i cromosomi dell’ibrido primario in frammenti tanto più piccoli quanto più alta è la dose di raggi X utilizzata.
+
+Il fatto che gli ibridi primari, come conseguenza dell'irradiazione, oltre ad avere cromosomi spezzettati vadano incontro a morte cellulare non ci importa, in quanto questo non influenza la membrana e dunque la capacità del PEG di indurre fusione tra questa cellula e quella di roditore.
+
+A questo punto l'ibrido secondario conterrà una popolazione di frammenti cromosomici umani e murini insieme a tutti i cromosomi di topo (N.B. la maggior parte dei frammenti di cromosomi saranno di topo in quanto l'ibrido primario conteneva \emph{un solo} cromosoma umano e l'intero assetto cromosomico murino). I frammenti cromosomici umani spezzettati però, a causa delle loro estremità libere, saranno estremamente instabili e reattivi e potranno andare incontro a due diversi destini:
+\begin{enumerate}
+\item potranno essere \textbf{degradati dalle esonucleasi nucleari}
+\item potranno integrarsi a caso all'interno dei cromosomi della cellula ospite
+\end{enumerate}
+
+Questo destino riguarderà sia i frammenti murini che umani, ma ad interessarci saranno solo quelli umani.
+
+A questo punto sarà necessario selezionare e clonare gli ibridi ottenuti e quello che si otterrà alla fine saranno tanti cloni diverdsi in cui, nei cromosomi murini integri di ognuno di essi, si saranno integrati in maniera causale frammenti cromosomici umani diversi.
+
+In altre parole avrò una popolazione di ibridi secondari con diversi frammenti del cromosoma inizialmente presente nell’ibrido monocromosomico integrati nei cromosomi di topo.
+
+Cose si procede per la localizzazione regionale?
+Per la localizzazione verrà sfruttato un marcatore noto (questo può essere un gene malattia o un marcatore anonimo). Ora, grazie al completo sequenziamento del genoma umano, è possibile procurarsi delle sequenze note di DNA, generalmente clonate in BAC\textbf{*}, distribuite in maniera abbastanza uniforme lungo tutto il cromosoma umano dell'ibrido primario ed utilizzare queste come marcatori di riferimento.
+
+\textbf{BAC (Bacterial Artificial Chromosome):} è un vettore articiale di DNA basato sul plasmide F isolato da E.coli. Si differenzia dai normali plasmidi in quanto è in grado di trasportare regioni di DNA di interesse molto più ampie, arrivando a tollerare inserti fino a 300 Kb (mediamente 100 Kb) rispetto alle 2-4 Kb che possono essere normalemnte inserite all'interno dei plasmidi.
+
+A questo punto i singoli cloni vengono analizzati per la presenza contemporanea del gene di interesse e di uno di questi marcatori anonimi, scelti perché coprono tutto il cromosoma in analisi.\\
+Alcuni di questi frammenti saranno molto lontani dal gene di interesse, perciò la probabilità che si trovino sullo stesso frammento presente in uno dei miei cloni (che, ricordiamo, contengono soltanto un frammentino del cromosoma) sarà molto bassa.\\
+Quello che si fa è andare a contare, marcatore per marcatore, in quanti cloni è presente sia il marcatore che il gene di interesse: se i marcatori sono lontani dal gene non ci sarà praticamente nessun clone che conterrà sia il marcatore che il gene di interesse, mentre se il marcatore si trova vicino al gene la probabilità che questi siano stati separati dalla radiazione diminuirà e la probabilità di trovare dei cloni che contengono entrambi sarà maggiore.
+
+Alla fine sarà possibile individuare, per un solo marcatore, un numero altissimo di cloni che contengono contemporaneamente il gene di interesse e il marcatore (di cui io conosco la posizione genomica). È evidente che se il numero di cloni in cui marcatore e gene sono contemporaneamente presenti è molto alto vuol dire che le due sequenze si trovano molto vicine (perché non sono mai state separate o sono state separate poche volte dalla rottura indotta da irraggiamento). 
+
+Questo chiarisce perchè il metodo sia in parte definito di tipo statistico, perché conto i cloni e statisticamente una sequenza è tanto più vicina quanto meno è probabile che sia stata separata dal gene di interesse per un evento di rottura indotto da irraggiamento (invece nel caso di approccio genetico è la ricombinazione che separa le sequenze).
+
+Questo approccio permette una risoluzione/localizzazione molto più elevata perchè non dipende dalla numerosità della progenie (come avviene nell'approccio genetico basato sulla ricombianzione meiotica), inoltre i frammenti scelti come marcatori che ricoprono tutto il cromosoma possono essere anche molto piccoli permettendomi di arrivare estremamente vicino al gene di interesse. Una volta arrivati così vicino al gene sarà possibile sequenziare quel segmento e, se nel caso questo sia un gene malattia, andare a verificare se è mutato nei pazienti e fare tutte le analisi del caso. 
+
+La risoluzione di questa tecnica è sovrapponibile al mappaggio molecolare.
+
+\textbf{Domanda}: \emph{Questa tecnica viene utilizzata per cercare un gene causativo di malattia?}\\
+\textbf{Risposta della prof:} Considerato che ormai tutti i geni malattia sono sequenziati, ad oggi questi approcci vengono utilizzati per confermare dei mappaggi che vengono fatti sulla base dell’allineamento di Bac.
+
+Come si costruisce un mappaggio completo di un genoma? Per costruire un mappaggio completo di un genoma fondamentalmente si allineano, per estremità condivise, degli enormi segmenti genomici clonati in Bac (150-200 Kb). Questi segmenti vengono allineati soltanto sulla base della corrispondenza/complementarietà delle estremità costruendo così dei grossi ``contigui'' (stiamo parlando di genomi di miliardi di pb quindi bisogna considerare pezzi grossi). Questi contigui sono costruiti su base statistica perché io non so esattamente cosa c’è in mezzo (in mezzo c’è un’enorme quantità di DNA genomico di cui io non so nulla se non che le estremità di questi segmenti sono complementari alle estremità dei segmenti successivi).\\
+È evidente che le \emph{``mappe grezze''} dei genomi, cioè questi primi allineamenti di contigui, devono essere confermate segmento per segmento, e quindi questi approcci servono per avere delle conferme sperimentali di dati puramente deduttivi.
+Molto spesso vengono fatte, per esempio, sulla base di note omologie di sequenze conservate nello stesso ordine e cioè in gruppi di linkage; ma non è detto che questi gruppi di linkage siano sempre conservati in organismi diversi, perciò per decodificare i genomi complessi e soprattutto per avere delle mappe fedeli bisogna usare dei metodi sperimentali e uno di questi è proprio l’uso dei Radiation Hybrids.
+
+Comunque, almeno nell’uomo, la localizzazione e il sequenziamento dei geni malattia si conoscono già. Bisogna inoltre dire che nella maggior parte dei casi, le malattie non sono semplicemente dovute a mutazioni in singoli geni ma sono dovute anche a eventi epigenetici, come nel caso di alcuni tumori. Per esempio ci sono degli approcci di diagnosi precoce del tumore che vengono fatti grazie alla scoperta che ci sono dei non-coding RNA (i non-coding RNA sono molecole che regolano l’espressione genica), che sono marcatori tumorali perché regolano proprio l’espressione dell’oncogene, dell’oncosoppressore o di una sequenza coinvolta nello sviluppo del tumore.\\
+Ecco allora che anche queste tecniche ad alta risoluzione possono servire per caratterizzare queste altre molecole che non sono correlate in maniera diretta al gene-malattia, perché non sono quelle che mutano nella malattia, ma la cui espressione altera l’espressione del gene-malattia. 
+Poi ci sono altri casi: per esempio si è scoperto che ci sono delle regioni che contengono delle sequenze che variano per numero di copie, si chiamano Copy Number Variation (CNV), queste sequenze sono localizzate in zone particolari del genoma e si è visto che nella popolazione sono polimorfiche, ma si tratta di segmenti genomici enormi che variano per numero di copie.
+
+Le Copy Number Variation hanno un impatto nell’espressività e nella penetranza di un sacco di malattie complesse. Queste nuove scoperte inducono a dissezionare il genoma in maniera sempre più specifica per capire come variano queste sequenze in una specifica regione del genoma, perché certe varianti sono patologiche e certe no e perché certe varianti influenzano l’espressività e altre no.\\
+Bisogna inoltre dire che le Copy Number Variation sono ancora uno dei problemi aperti perché ci sono delle famiglie in cui i genitori hanno una certa Copy Number Variation che non risulta essere patologica, mentre i figli che ereditano quella stessa Copy Number Variation presentano la patologia.\\
+Benchè non se ne conosca ancora la ragione le Copy Number Variation, che possono anche essere in regioni genomiche lontane dai geni-malattia, sono in grado di influenzarne la gravità e quindi in alcuni individui possono diventare patologiche, mentre in altri no.\\
+Questo dipende dal background genetico di quel particolare individuo, quindi dalla somma dei background genetici dei due genitori, che singolarmente avevano la Copy Number Variation ma non avevano la malattia.
+In generale si tratta di patologie multifattoriali come la schizofrenia o la predisposizione a patologie degenerative come l’Alzheimer e il Parkinson.\\
+Quindi la dissezione di genomi già così ben sequenziati e noti, come il genoma umano, a prescindere dall’identificazione del gene-malattia e delle mutazioni correlate (su cui c’è poco da dire di ulteriore), è utile per altre sequenze che invece influenzano l’espressione di questi geni e in questo modo anche la penetranza e l’espressività della malattia.
 
 
 
+\section{L'ibridazione in situ (Fluorescence In Situ Hybridization - FISH}
+
+Questa è una tecnica più diretta che permette sempre di localizzare dei geni sui cromosomi e che permette di assegnare una sequenza a una regione cromosomica con una risoluzione che, anche in questo caso, arriva a livello molecolare.
+
+Appena inventanta questa tecnica prevedeva l'utilizzo del trizio, un isotopo fluorescente. Oggi il trizio non viene più utilizzato in quanto pericoloso a causa della sua radioattività.
+
+La FISH è una tecnica di \textbf{ibridazione degli acidi nucleici}. I target in questo caso possono essere:
+\begin{itemize}
+\item cromosomi
+\item fibre di DNA
+\item nuclei interfasici
+\end{itemize}
+Comunque il target è sempre un singolo gene o una singola sequenza di DNA. Questo non è un problema indifferente, perché la citogenetica e la citogenetica molecolare si fanno a microscopio ottico ed è palese che la sequenza di DNA (parliamo di Angstrom) sia al di sotto del limite di risoluzione della microscopia ottica (0,1 micron).
+
+Il pregio della FISH è che mi permette di osservare al microscopio un frammento di DNA o RNA come un segmento fluorescente (sonda) sopra un altro segmento fluorescente (DNA bersaglio), anche se di un colore diverso.\\
+Inoltre esistono dei metodi quantitativi ad alta risoluzione che mi dicono quanto è lungo il pezzetto che io sto vedendo e poi, soprattutto, con questa tecnica io \emph{vedo una singola molecola}, quindi è un approccio che non mi da la media della presenza/assenza/dimensione di una certa sequenza in 1 milione di cellule simili fra loro, ma io vedo sul \emph{singolo cromosoma}, sulla \emph{singola molecola di DNA}, come è quella sequenza e come si rapporta con le sequenze adiacenti.\\
+Questa è una tecnica sofisticata e la sua risoluzione è minore di quella del sequenziamento propriamente detto. Comunque sono tecniche che devono essere usate congiuntamente e che danno informazioni complementari.
+
+Per questa tecnica è necessario avere un DNA target e un DNA sonda che andrà a ``scandagliare'' il genoma su cui devo trovare la sequenza complementare (questo vale per tutti gli esperimenti di ibridazione di acidi nucleici).\\
+Il target della sonda può essere:
+\begin{itemize}
+\item sezioni di tessuti
+\item cromosomi metafasici (DNA fortemente condensato)
+\item nuclei interfasici (DNA decondensato)
+\item cromosomi meccanicamente allungati (aumento la risoluzione)
+\item fibre di cromatina estesa
+\item DNA privato dei nucleosomi e pettinato su vetrini (risoluzione massima di livello molecolare)
+\end{itemize}
+
+Sia il target che la sonda possono essere di DNA o RNA: si possono fare delle RNA-FISH, perché anche sui cromosomi posso andare a verificare dove si vanno a legare certi RNA non-coding che hanno un significato regolatorio.
+
+Il principio di questa tecnica è quello di riuscire a formare degli eteroduplex tra il DNA (o RNA) bersaglio e il DNA (o RNA) sonda.\\
+In condizioni sperimentali appropriate, il DNA denaturato (il DNA ovviamente deve essere denaturato altrimenti non si può legare alla sonda, invece l’RNA è già a singola elica) può formare doppie eliche (eteroduplex) con DNA o RNA complementare o parzialmente complementare.\\ Questa è una cosa molto importante perché permette di giocare sulle condizioni sperimentali per andare a ricercare sequenze identiche o sequenze altamente omologhe o sequenze poco omologhe.
 
 
+\subsection{Southern blotting}
+Il Southern blotting, oggi poco usato, è la tecnica che viene usata quando si deve fare l’analisi di un genoma.\\
+Il primo passo di questa tecnica consiste nell'estrarre il DNA da qualche milione di cellule, e frammentarlo tramite digeristione con un enzima di restrizione o tramite sonicazione.\\
+I frammenti vengono poi fatti correre su un gel in modo che si separino sulla base della loro dimensione (elettroforesi).\\
+Una volta ottenuti i frammenti di DNA separati per dimensione si prende il gel, lo si mette su un filtro di nitrocellulosa e si schiaccia con forza in modo da trasferire il DNA dal gel alla carta (cromatografia di affinità su carta).\\
+A questo punto si mette il filtro di nitrocellulosa con il DNA in una bustina con una soluzione tampone che contiene la diluizione opportuna della sonda (ibridazione di acidi nucleici) facendo così ibridare il DNA presente sul filtro di nitrocellulosa con la sonda.\\
+Il filtro viene lasciato overnight a una temperatura tale da ottenere la formazione di doppie eliche: la sonda si legherà soltanto dove trova dei segmenti di DNA complementari.\\
+A questo punto lavo bene il filtro di nitrocellulare per togliere tutto ciò che non si è legato e poi faccio un’autoradiografia perché devo vedere il DNA-sonda che era marcato radioattivamente. Per fare l’autoradiografia copro il filtro ibridato con una lastra apposita (sono delle lastre simili a quelle che si usano per le radiografie) che verrà impressionata soltanto dove si era legata la sonda.\\
+Ciò che ottengo alla fine è una lastra in cui avrò delle bande nere che rappresentano i frammenti del genoma originale complementari alla sonda. 
 
 
+\subsubsection{Southern blotting e Ibridazione in situ}
+L’ibridazione in situ è molto simile al Southern blotting, anche se viene utilizzato un vetrino e non un filtro di nitrocellulosa per fissare il DNA.\\
+Inoltre con la FISH non viene utilizzata una sonda radioattiva, quindi non si fa l'autoradiografia, ma è comunque necessario in qualche modo evidenziare le regioni in cui si è legata la sonda.\\
+C'è poi un'altra grossa differenza: mentre nel Southern blotting la banda che vedo rappresenta il segmento complementare al mio gene (se supponiamo che la sonda sia un gene) derivante da una popolazione di milioni di cellule (quindi ogni banda rappresenta un milione di segmenti complementari alla mia sonda e infatti io posso guardare queste autoradiografie ad occhio nudo e vedo la banda che ha uno spessore di 3-4 mm e la larghezza di mezzo cm), nell'ibridazione in situ non ho nessun arricchimento, cioè ogni bersaglio è un genoma singolo, una singola molecola. Questo rappresenta un limite e una difficoltà da superare, perchè ad occhio nudo non possiamo vedere una singola molecola di DNA. 
 
 
+\subsection{La strategia sperimentale della FISH}
+Inoltre la FISH è una \textbf{tecnica morfologica}.\\
+Quando faccio l’estrazione del DNA per l’ibridazione alla Southern, frammento il DNA: prendo delle cellule da un qualsiasi tessuto che poi frammento usando degli omogenizzatori ed estraggo tutto il DNA e lo frammento e siccome il DNA è molto resistente, lo posso anche bollire.\\
+Con l’ibridazione in situ, invece, si devono vedere al microscopio i cromosomi, o la fibra, integri, e quindi si dovranno usare delle tecniche che permettano di mantenere il DNA integro.\\
+Inoltre, poichè al DNA si lega una singola sonda e poichè il segnale della singola sonda non è sufficiente per essere visibile ad occhio nudo, esisteranno anche delle tecniche per amplificare il segnale.
 
+Quindi si fanno dei preparati citologici in cui si usano delle condizioni sperimentali adatte a preservare la morfologia delle strutture biologiche: è necessario usare dei trattamenti che denaturino il bersaglio ma che allo stesso tempo siano abbastanza blandi da preservare la morfologia delle strutture biologiche.\\
+Tutto questo per quanto riguarda il \textbf{DNA bersaglio}.
 
+Per quanto riguarda la \textbf{sonda} invece, la sua principale caratteristica è quella di dover essere \emph{marcata}. Oggi non si usa più il trizio, ma una tecnica usata per marcare gli acidi nucleici e chiamata \textbf{``Nick-Translation''}.\\
+Per crere la sonda viene fatta una miscela di reazione contenente tutte le basi nucleotidiche in cui una di queste viene sostituita con una base modificata utilizzata come tracciante. Le più utilizzate sono:
+\begin{itemize}
+\item UTP coniugato con Biotina
+\item UTP coniugato con Digoxigenina
+\end{itemize}
+Il tracciante viene coniugato con l’UTP coniugato perché crea meno problemi di ingombro sterico, ma si possono anche utilizzare dei metodi in cui l’UTP è già direttamente coniugato con un fluoroforo.
 
+La scelta del tipo di marcatura dipende dal tipo di esperimento che si deve fare.
 
+Oltre alle basi nucleotidiche la miscela conterra anche un'\emph{endonucleasi} e una \emph{DNA polimerasi}: l'endonucleasi farà dei tagli a singola elica mentre la DNA polimerasi, a partire dal taglio, ``mangerà'' e contemporaneamente risintetizzerà una nuova sequenza di DNA che integrerà le basi marcate.
+Quindi c’è una DNAsi che fa il taglio (il primo nick), ma poi il nick viene traslato, perché la polimerasi digerisce e contemporaneamente sintetizza nuovo DNA. Questa è la reazione di Nick-Translation. 
 
+Questo tipo di sonda inoltre non ha bisogno di essere purificata: la sonda viene costruita a partire da un plasmide/BAC/vettore (che dovrà essere estratto dai batteri, purificato e concentrato) e non c'è bisogno di linearizzare questo DNA nè di exciderne la sonda umana in quanto il DNA del vettore non ha \emph{nessuna omologia} con il DNA umano.
 
+Naturalmente se la sonda era di DNA questo dovrà essere denaturato perché deve essere reso a singola elica.\\
+A questo punto la sonda viene posta sui vetrini dove ho già messo il preparato citologico e dove il DNA-bersaglio era stato a sua volta denaturato (in condizioni che preservino la morfologia).\\ 
+A questo punto la sonda legata al DNA-bersaglio dovrà essere evidenziata con il metodo più adatto a seconda del tracciante utilizzato.
 
+Se come tracciante era stata utilizzata una molecola fluorescente basterà andare a vedere al microscopio dove si trova la fluorescenza, ma in realtà la marcatura diretta con una molecola fluorescente va bene qundo ho delle sequenze ripetute o delle sequenze molto grandi, cioè se non ho bisogno di un’altissima risoluzione. Se invece ho bisogno di un’alta risoluzione devo usare dei metodi di amplificazione del segnale che funzionino quando come tracciante uso l'UTP coniugato con la biotina o la digoxigenina. 
 
+La marcatura può anche essere fatta tramite modificazione chimica della sonda (tecnica è poco utilizzata). 
 
+Per evidenziare la sonda si usa soprattutto l’\textbf{immunofluorescenza}, tecnica che richiede l'utilizzo di anticorpi diretti specificamente contro il tracciante utilizzato, quindi anticorpi anti-Digoxigenina o anti-Biotina.
+Oltre a questi due può anche essere utilizza l’\textbf{Avidina}, una molecola con un’elevatissima affinità per la Biotina (lo stesso tipo di affinità che c’è tra un antigene e un anticorpo monoclonale, quindi è un equivalente dell’immunofluorescenza).
 
+Quindi:
+\begin{itemize}
+\item se il tracciante è la Biotina uso l’Avidina
+\item se il tracciante è la Digoxigenina uso degli anticorpi specifici contro la Digoxigenina
+\item nel caso di un fluorocromo analizzo direttamente i preparati perché la sonda è già fluorescente
+\end{itemize}
 
+Quando gli esperimenti riescono bene il segnale è molto specifico e, dal momento che la risoluzione di questi metodi non è altissima (a meno che non si facciano delle amplificazioni), questo è un vantaggio perché mi riduce di molto il \emph{background}.\\
+Il background deriva da eventi di ibridazione aspecifica, da lavaggi non perfetti. In genere il background è rappresentato da singoli spot fluorescenti sporadici e molto piccoli rispetto ai segnali specifici che sono degli spot molto più intensi.\\
+Inoltre, soprattutto nel caso in cui si analizzino i cromosomi, questi segnali specifici sono gemelli sui due cromatidi fratelli, cosa che non avviene per i segnali aspecifici: questo è un grande vantaggio perché nel momento in cui mi viene bene l’esperimento è evidente che se io, anche analizzando soltanto 10 mitosi, vedo lo stesso cromosoma con la stessa dimensione che ha sempre due spot nella stessa regione, capisco subito che la sonda si trova lì e che l’esperimento è venuto bene. Questo se io lavoro su cromosomi metafasici, invece è più complicato se lavoro su fibre di DNA.
 
+Quindi quando gli esperimenti sono puliti l’interpretazione dei risultati è molto semplice, perché si vedono queste coppie di spot specifici.
+In altre parole: il segnale specifico è distinguibile dal fondo e generalmente si presenta in forma di spot fluorescenti su entrambi i cromatidi.
 
+\subsubsection{L’amplificazione del segnale}
+L’amplificazione del segnale è importante quando abbiamo delle sonde piccole o se abbiamo bisogno di un’alta risoluzione come per esempio nel caso in cui, anziché lavorare su cromatina condensata (cioè su cromosomi), si lavori su cromatina estesa o addirittura su fibre di DNA (in questo caso è necessaria una risoluzione molto alta). Per fare questo si usa l’\textbf{approccio del sandwich}.
 
+L’approccio del sandwich consiste nell’aumentare il numero di molecole di fluorocromi legati al bersaglio sovrapponendole l'una all’altra.\\
+Per esempio: supponiamo che la sonda sia marcata, per nick-translation, con UTP coniugato con Biotina. Nel sandwich avrò:
+\begin{enumerate}
+\item sonda biotinata
+\item il primo strato sarà avidina coniugata con un fluorocromo (questa è la prima molecola fluorescente)
+\item il secondo strato sarà un anticorpo anti-avidina coniugato con biotina
+\item poi utilizzo nuovamente avidina coniugata con un fluorocromo.
+\end{enumerate}
 
+\begin{wrapfigure}{r}{0.46\textwidth}
+    \includegraphics[width=0.46\textwidth]{img/36_amplificazione_segnale_fluorescente.png}
+  \caption{Amplificazione del segnale}
+\end{wrapfigure}
 
+A questo punto ripeto gli step 3 e 4, perché evidenzio la Biotina con l’Avidina coniugata con il fluorocromo e poi utilizzo un anticorpo anti-Avidina biotinato, la Biotina la evidenzio con l’Avidina coniugata con il fluorocromo e così via aumentando gli strati.\\
+In realtà più di 3/4 strati non si fanno, perché se aumento troppo gli strati aumento molto anche il background (in generale 3 strati sono già sufficienti per avere un’ottima amplificazione del segnale).
 
+Seinvece si è utilizzata una sonda marcata con Digoxigenica quello che si farà sarà alternare gli animali in cui sono stati prodotti gli anticorpi, cioè uso anticorpi prodotti in un certo animale e poi anticorpi contro la parte costante dell’anticorpo di quel particolare animale.
 
+\clearpage
+Ad esempio:
+\begin{itemize}
+\item il primo strato è dato dalla sonda marcata con digoxigenina
+\item poi uso un anticorpo primario prodotto in pecora anti-dig e coniugato con un fluorocromo
+\item a questo punto uso un anticorpo \emph{anti-pecora}, ad esempio prodotto in capra, coniugato con un fluorocromo
+\item poi uso un anticorpo \emph{anti-capra} prodotto in pecora coniugato con un fluorocromo, e così via.
+\end{itemize}
+Da questo momento in poi continuo alternando anti-capra e anti-pecora in più strati. Anche qui 3-4 strati sono sufficienti.\\
+Importante è non avere cross-reattività fra gli anticorpi. Molto spesso può essere necessario colorare e vedere contemporaneamente su uno stesso preparato 4-5-10 sonde diverse che, per essere colorate in modo diverso, devono essere marcate in modo diverso e quindi poi possono essere evidenziate con una sequenza diversa di anticorpi specifici.
+
+Attenzione: è importante che non ci sia cross-reattività fra gli anticorpi, quindi se uso una sequenza capra-pecora e un altro metodo di marcatura con un tracciante diverso e altri anticorpi, cercherò qualcosa di filogeneticamente molto lontano dalla capra e dalla pecora, per esempio uso anticorpi prodotti nei bovini oppure nell’asino, nel cavallo, nel pollo, nel topo (i più comuni sono gli anticorpi prodotti nel topo e in altri roditori). Più vado lontano filogeneticamente più sono sicuro che non ci sia cross-reattività fra gli anticorpi perché questo potrebbe essere molto pericoloso.
+
+È anche possibile fare una doppia marcatura della sonda usando la nick-translatin e aggiungendo, con la \textbf{terminal-transferasi}, una coda marcata.
+
+Per l’amplificazione del segnale si potrebbe anche usare la PCR, ma questa funziona male per via della dimensione dei frammenti: la lunghezza media dei frammenti per l'ibridaizone è di 700-1000 bp, mentre i frammenti amplificati dalla PCR sono molto più piccoli.
+ 
+La lunghezza dei frammenti è importante perché io ottengo tanti frammenti tutti complementari alla sonda e quando li ibrido sul bersaglio, questi frammenti saranno localizzati a caso sulla sequenza bersaglio: se questi frammenti sono grossi si allineano e si sovrappongono parzialmente, cioè più grossi sono e più facilmente coprono tutto il segmento a cui sono complementari.
+
+\subsubsection{Principio dell’albero di Natale per l’amplificazione del segnale}
+In questo tipo di approcci, per l’amplificazione del segnale, si sfrutta lo stesso principio che si usa per l’immunofluorescenza, in particolare l’immunofluorescenza indiretta.\\
+In generale per avere una maggiore intensità di marcatura fluorescente non si fa l’immunofluorescenza diretta ma indiretta, cioè si usa un primo anticorpo ``freddo'' (non marcato) e poi un anti-anticorpo ``caldo'' (marcato).
+
+L’immunofluorescenza indiretta fa ricorso a quello che viene chiamato ``Principio dell’albero di Natale''. Partiamo dal target che voglio identificare, che è dotato di tanti epitopi: per prima cosa viene utilizzato un anticorpo freddo che si lega a ciascuno di questi epitopi, e ognuno di questi anticorpi primari legati funzionerà, a sua volta, da antigene per il secondo anticorpo (che è quello fluorescente), infatti ognuno di questi anticorpi primari, a sua volta, ha tanti epitopi, a ciascuno dei quali si legherà l’anticorpo secondario fluorescente.\\
+Così, pur avendo usato soltanto due anticorpi, avrò un’enorme quantità di molecole fluorescenti che mi daranno segnale fluorescente.\\
+Viene chiamato \emph{Principio dell’albero di Natale}, perché ad ogni strato anticorpo anti-anticorpo ho un’amplificazione a forma di abete al contrario. Questo amplifica enormemente il segnale fluorescente.
+
+\subsection{I problemi della microscopia in fluorescenza}
+Quando abbiamo a che fare con la microscopia in fluorescenza abbiamo due problemi fondamentali:
+\begin{enumerate}
+\item il \emph{``rumore''} della fluorescenza (background)
+\item il \emph{decadimento} continuo della fluorescenza dovuto alla conversione, indotta dalla luce, del fluorocromo in un composto non fluorescente. Questo processo richiede luce e ossigeno.
+\end{enumerate}
+
+La \textbf{risoluzione} è la \emph{distanza minima che esiste fra due punti che possono essere ancora riconosciuti come separati}. Gran parte della risoluzione microscopica dipende dalla definizione dell’immagine microscopica. Con la fluorescenza tuttavia spesso vi è un ``alone di fluorescenza'' che fa sì che quando due spot fluorescenti sono molto vicini questi non possano essere distinti come separati ma risultino sovrapposti. Questo è un problema per la risoluzione microscopica, soprattutto quando si lavora con delle esigenze di risoluzione come nella FISH.\\ Questo è dovuto al rumore della fluorescenza, che fa diminuire la risoluzione.
+
+Inoltre per evidenziare una molecola fluorescente questa deve essere esposta a una fonte luminosa che abbia la lunghezza d'onda adatta per eccitare il fluorocromo che sto utilizzando.\\
+Eccitare la fluorescenza vuol dire che il fluoroforo emetterà ad una lunghezza d’onda che sarà dipendente dal fluoroforo che ho usato e dalla lunghezza d’onda incidente. L’emissione è dovuta al fatto che uno o più elettroni dell’orbitale più esterno decadono in un orbitale inferiore, quindi a un livello di energia inferiore, e questo decadimento produce un'energia che causa l’emissione alla lunghezza d’onda che mi permette di vedere l’emissione fluorescente. Quindi come io espongo alla luce UV il mio preparato perdo l’informazione, perché si ha decadimento della fluorescenza, quindi i preparati non sono permanenti ma soprattutto questo decadimento può essere molto rapido (addirittura può essere tanto rapido che io non riesco a registrare il dato).
+
+Quindi c’è il decadimento continuo della fluorescenza dovuto alla conversione indotta dalla luce del fluoroforo in un composto non fluorescente e il processo avviene in presenza di luce e ossigeno.
+Come posso eliminare la luce e l’ossigeno per ridurre questo fenomeno? Non posso eliminare la luce perché se non eccito il fluorocromo non posso avere emissione di fluorescenza, però posso eliminare l’ossigeno.\\
+Vediamo quali sono le soluzioni che si adottano:
+\begin{itemize}
+\item \textbf{obiettivi ad alta apertura numerica} (N.A.)
+\item uso di \textbf{fluorocromi fotostabili}
+\item uso di \textbf{tamponi di montaggio antiossidanti} (per togliere l’ossigeno) che riducono di molto l’ossidazione quando i preparati vengono esposti alla luce
+\item \textbf{riduzione al minimo della luce incidente}, perché più forte è la luce incidente (la luce ultravioletta in questo caso) e più veloce è il decadimento della fluorescenza. Per fare questo si usano \textbf{videocamere CCD (Charge Cloupled Device)}, cioè delle apparecchiature ad accoppiamento di carica. Queste sono videocamere a bassissimo livello di energia, cioè telecamere che riescono ad acquisire immagini con un livello di energia molto basso (in presenza di poca luce) ma con lunghe esposizioni. Queste telecamere vengono normalmente utilizzate in astronomia per catturare lunghezze d’onda provenienti da astri che non si vedono, con lunghissime esposizioni e sono state modificate per l’uso in microscopia a fluorescenza.
+\end{itemize}
+
+L’\textbf{apertura numerica} è una \emph{misura della capacità di una lente di convogliare e concentrare la luce sul preparato}. L’apertura numerica è \emph{inversamente proporzionale all’ingrandimento dell’obiettivo}: massima è l’apertura numerica e migliore è la risoluzione, proprio perché riesco a far convergere tutta la luce in un singolo punto che mi interessa, però l’aumento della risoluzione (cioè la capacità di ingrandimento dell’obiettivo) va a scapito dell’apertura numerica, quindi la risoluzione viene sensibilmente persa. D’altra parte per analizzare i cromosomi e soprattutto le fibre di DNA è necessario usare obiettivi che hanno il massimo ingrandimento: i cromosomi si guardano con obiettivi 100x che vuol dire 1000 ingrandimenti, se sommiamo quelli degli oculari.\\
+La regola è quella di \emph{massimizzare il rapporto segnale/rumore} usando obiettivi con un ingrandimento minimo che permette una buona risoluzione: aumenta il rapporto segnale rumore a spese dell’ingrandimento.\\
+Gli obiettivi che utilizziamo in questo tipo di lavori non sono da 100 ingrandimenti ma 63 e sono degli obiettivi dotati di quello che viene chiamato \emph{``diaframma di iride''} e cioè una ghiera che mi permette di variare l’apertura numerica a seconda del preparato che sto analizzando.
+Con questi obiettivi si riesce ad ottimizzare la qualità delle immagini.\\
+Il fatto di perdere un po’ in ingrandimento non è un grosso problema perché la risoluzione è talmente migliore, quindi la definizione dell’immagine è talmente migliore, che il risultato finale è comunque nettamente migliore rispetto a quello che si può ottenere utilizzando altri obiettivi 100x.
 
 
 
