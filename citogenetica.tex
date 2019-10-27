@@ -2021,6 +2021,174 @@ Questa tecnica viene utilizzata per:
 
 
 
+\chapter{La regolazione dell'espressione genica}
+Quando si parla di ``regolazione dell’espressione genica'' ci si riferisce a tutto quello che può succedere a partire dalla sequenza di DNA fino ad arrivare alla proteina matura.\\
+Quello della regolazione dell’espressione genica è un campo infinito che include diverse branche della biologia. I due esempi modello storici, quello dei cromosomi politenici (fenomeno del puffing) e dei cromosomi a spazzola, sono esempi di regolazione epigenetica e di modificazione locale della cromatina.\\
+Noi parleremo dettagliatamente del fenomeno della \textbf{compensazione del dosaggio genico} usando due esempi che rappresentano due modi opposti per risolvere lo stesso problema biologico:
+\begin{itemize}
+\item l’inattivazione funzionale del cromosoma X nei mammiferi (il primo modello approfondito di regolazione epigenetica dell’espressione genica)
+\item la compensazione dei geni legati all’X attuata in Drosophila.
+\end{itemize}
+
+In C. elegans c’è ancora un diverso meccanismo epigenetico di compensazione del dosaggio che è all’interfaccia tra quello utilizzato nei mammiferi e quello utilizzato nella Drosophila.
+
+Infine parleremo di \textbf{imprinting genomico}, che negli anni '90 ha rivoluzionato il modo di vedere i meccanismi di regolazione dell’espressione genica.
+
+
+\section{I livelli di controllo dell'espressione genica}
+I livelli di controllo possibili sono molti e molto diversi: alcuni agiscono nel nucleo, altri nel citoplasma dopo che l’RNA è stato esportato, ecc; dovunque sia coinvolto un processo metabolico che prevede l’azione di enzimi ci può essere un livello di controllo.
+
+Il primo livello di controllo che interessa i genetisti avviene a livello del DNA ed è il \textbf{controllo della trascrizione} (è quello energeticamente più ``economico'' per la cellula).\\
+Questo controllo avviene attraverso l’azione combinata di specifiche sequenze regolatrici: il primo modello scoperto per la regolazione dell’espressione genica è stato il \textbf{modello dell’operone} scoperto nei batteri, modello che poi si è capito adattarsi molto poco negli eucarioti nei quali la struttura genomica è più complessa. Questo modello è stato comunque fondamentale per l’identificazione di sequenze chiave che regolano l’espressione genica, ovvero promotori e sequenze che interagiscono con gli elementi regolativi (i.e. induttori e repressori).
+
+Esistono mutanti, detti \emph{``costitutivi''}, che non risentono degli elementi regolativi (induttori o repressori) perché possiedono delle mutazioni nella sequenza del promotore; tanti altri casi sono ben noti nelle patologie umane in cui alterazioni dell’espressione genica sono dovute ad alterazioni della sequenza di elementi regolativi. 
+
+La maggior parte della regolazione dell’espressione genica è però dovuta a \textbf{meccanismi di tipo epigenetico}: questi sono meccanismi che non alterano la sequenza del gene, tantomeno del promotore o degli effettori che agiscono sul promotore (o su enhancers e silencers), ma sono delle modificazioni biochimiche che possono avvenire a livello del DNA (e.g. metilazione di specifiche citosine, modificazioni chimiche a livello degli istoni con conseguente modificazione della struttura del DNA e del nucleosoma) e che possono essere attivanti o inattivanti. Le modificazioni epigenetiche consistono in \textbf{modificazioni post traduzionali} degli istoni che possono ad esempio essere acetilati, o nella metilazione di particolari residui istonici. Questi avvenimenti modificano il grado di condensazione della cromatina, di impacchettamento dei cromosomi, nascondendo o esponendo sequenze regolative o addirittura modificando il territorio cromosomico o il dominio cromatinico in cui si trova un certo gene che così può essere lasso o ipercondensato, e in questo modo essere attivato o inattivato.
+
+Questo è il meccanismo principe di controllo della trascrizione negli eucarioti.
+
+Gran parte del genoma non viene tradotta ma solamente trascritta in RNA che possono essere long non coding RNAs e short non coding RNAs: ognuno di essi ha un ruolo diverso nella regolazione dell’espressione genica.
+
+I trascritti primari normalmente sono soggetti a maturazione e splicing: anche questi passaggi possono essere controllati. La stragrande maggioranza dei geni è soggetta a splicing alternativo, ovvero a seconda di quali introni vengono rimossi o meno, una stessa sequenza può esprimere proteine diverse che possono avere non solo funzioni diverse ma anche una diversa tessuto-specificità.\\ Tutto questo avviene ancora all’interno del nucleo.
+
+Una volta maturato, il trascritto deve essere esportato dal nucleo per entrare nel citoplasma dove sono presenti ulteriori elementi di controllo: può essere controllato il trasporto (è un evento attivo, per cui l’efficienza con cui il trascritto viene esportato è modulabile), oppure la stabilità dei messaggeri (il turn-over). Anche nel controllo della stabilità dei messaggeri hanno un peso rilevante molecole di RNA non tradotti.
+
+La traduzione, visto quanti sono gli elementi che intervengono nel processo, è fortemente controllata, ma anche in seguito alla formazione della proteina questa può essere ulteriormente processata, modificata attraverso chinasi o altri fattori che possono poi regolarne l’attività. C’è un numero enorme di elementi che intervengono simultaneamente o separatamente.
+
+Per quanto riguarda il flusso delle vie metaboliche che portano all’attivazione di una particolare rete di reazioni, in genere il meccanismo è questo: ogni volta che abbiamo una via metabolica strettamente controllata durante lo sviluppo e il differenziamento, c’è una sequenza di interruttori che accendono o spengono diverse ramificazioni di questa via metabolica, fino ad arrivare a una rete complessa di vie metaboliche più o meno interconnesse tra loro. Il principio è quello di una sequenza gerarchica di interruttori che se accesi o spenti danno la possibilità di progredire verso ramificazioni successive di una via metabolica principale che si suddividerà in vie secondarie che a loro volta si ramificheranno in due o più vie metaboliche di ordine superiore e via dicendo. Alla fine si avrà una rete di vie metaboliche che porteranno allo sviluppo e al differenziamento. Abbiamo un punto di partenza, un interruttore principale che se acceso andrà ad accendere e/o spegnere una via metabolica.
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+    \includegraphics[width=0.6\textwidth]{img/impianto_elettrico.png}
+  \caption{Il differenziamento cellulare}
+\end{wrapfigure}
+
+Prendiamo come esempio esplicativo l’impianto elettrico di un grande edificio: se partiamo dalla situazione indifferenziata (lo zigote fino allo stadio di 8 cellule totipotenti) abbiamo un interruttore generale che accende/spegne l’impianto elettrico di tutto l’edificio. Si avrà un primo livello di differenziamento, che è il commitment di una parte delle cellule a disegnare l’asse cefalo-caudae, abbiamo dunque una prima biforcazione in due vie metaboliche ben distinte, chiamate in figura scala A e scala B. C'è una parte delle cellule che segue una via metabolica per cui sono committed, destinate, a formare la testa, mentre quelle della scala B sono destinate a formare la coda.\\
+Ci sono poi altri interruttori che possono essere accesi o spenti e a seconda di questo determinano i diversi abbozzi dei foglietti che poi origineranno i diversi tessuti e questo vale sia per le cellule della scala B che per le cellule della scala A che sono già committed. In figura è rappresentato come il livello di regolazione dell'accensione o dello spegnimento dell’impianto elettrico ai diversi piani di questo edificio. Ad ogni piano, ogni appartamento potrà avere o meno l’impianto elettrico acceso o spento, e quindi di nuovo degli interruttori che differenzieranno all’interno di ciascun foglietto i diversi tessuti, e cioè la luce arriva ai diversi appartamenti fino ad arrivare al poter accendere o spegnere la abat-jour del proprio comodino.
+Dobbiamo sempre pensare a un ordine gerarchico di interruttori fino a formare una rete: vie metaboliche estremamente interdigitate tra loro.
+
+Le modificazioni epigenetiche consistono in cambiamenti della cromatina che regolano l’espressione genica a livello trascrizionale negli eucarioti.
+Le modificazioni epigenetiche non alterano la sequenza del DNA, ma solo la struttura tridimensionale della cromatina.
+
+La domanda sorge spontanea: queste modificazioni che non riguardano la sequenza del DNA sono ereditabili per via mitotica? Sì, esiste una memoria cellulare. Ma sono ereditabili per via germinale? E se sì, quanto? Questo problema mette in discussione concetti a un livello molto avanzato. È una sorta di neo-lamarckismo. È evidente che se si parla di modificazioni indotte dal cambiamento della cromatina è perché ci sono dei segnali ambientali durante lo sviluppo e il differenziamento (stimoli interni che cambiano la risposta della cellula e ne determinano il cambiamento funzionale quali ormoni o fattori regolativi). Questi segnali possono essere modificati e indotti da elementi fisici. In questo caso non si parla di cambiamenti acquisiti come nel lamarckismo classico (caratteristiche non ereditabili come il collo lungo della giraffa), ma siccome l'RNA può essere retro-trascritto in alcuni casi è stato dimostrato che nella sequenza del DNA vengono introdotte delle modificazioni che poi saranno ereditate anche nella progenie. Sono argomenti di dibattito molto interessanti. Non mettiamo in dubbio il modo di pensare l’evoluzione, però introduciamo nozioni che cambiano il modo di vedere l’eredità dei caratteri acquisiti anche se non riguardano fenotipi eclatanti come la lunghezza del collo.
+
+I cambiamenti epigenetici hanno un ruolo chiave nei processi di regolazione dell’espressione genica negli eucarioti.\\
+Le modificazioni epigenetiche non riguardano le sequenze regolatrici per sé, ovvero promotori, enhancers o silencers, ma piuttosto l’accessibilità di tali sequenze ai fattori con cui queste interagiscono.
+
+Le modificazioni epigenetiche consistono in:
+\begin{itemize}
+\item metilazione delle citosine del DNA,
+\item metilazione ed acetilazione di specifici gruppi istonici che formano l’ottamero del nucleosoma. 
+\end{itemize}
+
+C’è un equilibrio locale nelle regioni del genoma tra gruppi di metili e gruppi di acetili, e quando questo rapporto raggiunge un valore critico si ha attivazione o repressione dell’espressione genica. Dal momento che localmente nei genomi c’è un rapporto ben specifico che varia nel tempo, si parla di \textbf{codice istonico}. A causa della sua plasticità decodificare questo codice risulta difficile: varia tra le cellule dell’organismo in funzione del grado di sviluppo e differenziamento, ma anche in funzione del ciclo cellulare.
+
+Durante la trascrizione e la replicazione la doppia elica di DNA si deve aprire per essere accessibile al complesso trascrizionale o al complesso replicativo, gli istoni si staccano, il nucleosoma si distrugge per poi riformarsi non appena completato il processo. La cromatina deve essere in una conformazione adatta affinché si stacchino gli otto istoni che formano il nucleosoma. Poi, appena completato il processo di trascrizione o di replicazione, gli istoni dell’ottamero si riassociano al DNA. Tutto questo è modulato dal grado di condensazione della cromatina. Nel modello del nucleo interfasico, la cromatina ha una struttura ad anse. Esistono meccanismi che modulano il grado di condensazione delle anse, e anche la loro dimensione. Le anse sono più o meno compatte in diversi momenti funzionali e in diverse regioni cromosomiche.
+
+Come già descritto nel capito 3, la cromatina può essere suddivisa in \emph{eterocromatina} ed \emph{eucromatina}.
+
+Ricordiamo che le caratteristiche dell'\textbf{eterocromatina} sono:
+\begin{itemize}
+\item rappresentano regioni del cromosoma eucariotico \emph{dense e compatte} in telofase, interfase e prima profase
+\item sono più \emph{intensamente colorate} in tutte le fasi del ciclo cellulare
+\item si divide in:
+	\begin{itemize}
+		\item \textbf{Costitutiva:} queste sono regioni specifiche di cromatina costituzionalmente (i.e. sempre) eterocromatiche, presenti su ambedue gli omologhi in tutti i tipi cellulari e in tutti gli stadi dello sviluppo (con le eccezioni che confermano la regola)
+		\item \textbf{Facoltativa:} sono regioni eterocromatiche soltanto in alcune cellule o in alcuni organismi, oppure lo sono solo in alcuni individui della stessa specie. Può succedere anche che un omologo sia eterocromatico e l’altro no. Sono porzioni di eterocromatina localizzate in regioni cromosomiche che normalmente sono eucromatiche. Due esempi sono:
+				\begin{itemize}
+					\item i cromosomi paterni nei maschi di alcune specie di insetti in cui vi è ipercondensazione e inattivazione funzionale di tutto il set cromosomico paterno che determina lo sviluppo in senso maschile,
+					\item il cromosoma X inattivo nelle femmine dei mammiferi. Nei maschi dei mammiferi c’è un solo cromosoma X e nella donna 2: uno è ipercondensato e l’altro no. Questo processo riguarda solo i tessuti somatici delle cellule dei mammiferi (riguarda solo un omologo, in modo diverso tra i diversi tessuti) mentre per lo sviluppo dei gameti è ovvio che devono essere attivi entrambi.
+                  \end{itemize}
+	\end{itemize}
+\item sono \textbf{allocicliche} (hanno un ciclo di replicazione diverso, in larga misura sono a \emph{replicazione tardiva})
+\item sono ritenute in larga misura \emph{geneticamente inerti}.
+\end{itemize}
+
+Le ultime due affermazioni non sono esattamente vere, infatti lo studio ad alta risoluzione dei genomi ha dimostrato l'esistenza di sotto-territori attivamente trascritti e meno condensati all'interno delle regioni eterocromatiche.
+
+Le caratteristiche dell'\textbf{eucromatina} invece sono:
+\begin{itemize}
+\item regioni del cromosoma eucariotico che subiscono il \emph{normale ciclo di condensazione}
+\item a \emph{colorazione pallida} in tutte le fasi del ciclo (se uso un colorante come il ghilsa o una colorazione citologica, sono meno elettrondense al microscopio elettronico)
+\item si pensa che contengano i geni funzionalmente attivi
+\end{itemize}
+
+\section{La compensazione del dosaggio genico}
+Nelle specie con cromosomi del sesso eteromorfi (i.e con morfologia diversa – esistono modelli diversi quali x0 o zw) ed in particolare nelle specie a determinazione cromosomica del sesso di tipo XX/XY, tutti i geni localizzati sul cromosoma X sono in doppia dose nelle femmine. 
+
+Tutte le volte che c’è eteromorfismo dei cromosomi del sesso il dosaggio genico delle sequenze è diverso, ma le cellule somatiche di maschi e femmine di qualsiasi specie devono essere metabolicamente uguali. C’è una differenza di dose genica come sequenza, che deve essere compensata perché si deve avere un’identica dose di prodotto genico.
+ 
+Sia in Drosophila che nell'uomo il cromosoma X è molto grande mentre l’Y è piccolo. Inoltre molti dei geni localizzati sul cromosoma X sono geni house-keeping, mentre il cromosoma Y è prevalentemente eterocromatico e privo di geni, a parte una piccola porzione che contiene geni legati allo sviluppo dei caratteri sessuali secondari, alla fertilità, e necessari per lo sviluppo in senso maschile della gonade indifferenziata. La gonade indifferenziata è un ovario rudimentale che, per svilupparsi in quella maschile, necessita dell’attivazione di geni sul cromosoma Y.
+
+Nelle cellule somatiche di organismi maschili e femminili dunque, a causa delle differenze tra i due tipi di cromosomi, vi sarà una differenza nella quantità di prodotto genico del cromosoma X. Questa differenza deve essere annullata in quanto le cellule somatiche devono essere uguali. I meccanismi che portano a questa uguaglianza di dose di prodotto nelle cellule somatiche femminili e maschili prendono il nome di \textbf{``compensazione del dosaggio dei geni legati all’X''} e sono modificazioni di tipo epigenetico.
+
+Questo è un classico esempio di come nell’evoluzione uno stesso problema biologico sia stato risolto in modo diverso in specie diverse (convergenza evolutiva). Questi meccanismi si basano sempre e comunque su meccanismi di regolazione epigenetica.
+
+Nei mammiferi il meccanismo di compensazione si basa sull’inattivazione funzionale di uno dei due cromosomi X in tutte le cellule somatiche femminili. Questo avviene fondamentalmente in via primaria attraverso la metilazione del DNA. Nella Drosophila si ha un meccanismo opposto, perché si ha una iper-espressione dei geni localizzati sull’unico cromosoma X maschile.
+La base molecolare è l’acetilazione dell’istone H3 dei nucleosomi del cromosoma x maschile. La determinazione del sesso nei mammiferi dipende dalla presenza dell’Y, in particolare dalla presenza di quelle sequenze dove ci sono i determinanti per il differenziamento della gonade in senso maschile (infatti ci sono dei maschi XXY, sindrome di Klinefelter, nei quali c’è una piccola traslocazione di quella piccola sequenza del cromosoma Y sull’X). Nella Drosophila invece è il rapporto tra il numero intero di set di autosomi e numero di cromosomi X. Quando questo rapporto è 1 (2 set autosomi e 2 cromosomi X) lo sviluppo è in senso femminile, se il rapporto è di ½ lo sviluppo è in senso maschile. Poi ci sono gli inter-sessi se ci sono delle variazioni.
+Nei mammiferi per la compensazione saranno importanti i geni che si trovano sull’X. Viceversa nella Drosophila è evidente che interverranno geni legati all’X ma anche quelli sugli autosomi.
+Proprio per la scoperta del corpo di barr è stato subito facile fare un’ipotesi su quale fosse il meccanismo di compensazione del dosaggio genico nei mammiferi, la prima ipotesi si è rivelata corretta, ed è stato scoperto prima di quello della Drosophila. La completa delucidazione del meccanismo molecolare della compensazione del dosaggio è arrivata intorno alla fine degli anni 90.
+A tutt’oggi ci sono una grande quantità di quesiti aperti su quale sia il meccanismo molecolare di compensazione del dosaggio nei mammiferi.
+Nei mammiferi intervengono dei meccanismi che si basano sull’intervento di RNA non tradotti. Si è scoperto che sono tantissimi questi RNA che lavorano insieme per l’inattivazione del cromosoma X. È molto complicato capire cosa succede. In tutti questi meccanismi di regolazione epigenetica ci si chiede sempre cosa c’è a monte, qual è il primo segnale? Sono reti complesse e capire cosa viene prima o dopo è difficile. 
+
+INATTIVAZIONE FUNZIONALE DEL CROMOSOMA X:
+percorso storico della maturazione del pensiero scientifico
+
+    • PRIME OSSERVAZIONI MORFOLOGICHE, del corpo di barr fondamentalmente. Già tramite queste osservazioni risultò chiaro che il meccanismo di inattivazione dipendesse da una ipercondensazione del DNA.
+    • OSSERVAZIONI CITOLOGICHE
+    • OSSERVAZIONI GENETICHE: basate su cosa succede negli incroci e nella progenie di individui che hanno anomalie dei cromosomi del sesso
+    • IPOTESI DI MARY LYON: che altro non è che la sintesi di osservazioni precedenti 
+    • PROVE CITOLOGICHE
+    • STUDIO DI MARCATORI GENETICI 
+    • MECCANISMO MOLECOLARE
+
+Prime osservazioni: 1949 BARR osserva in nuclei interfasici di cellule somatiche di femmine di gatto la cromatina sessuale, ovvero un corpo eterocromatico, più intensamente colorato rispetto al resto dell’eterocromatina, associato alla membrana nucleare. È una pallina molto scura che si osserva solo nelle cellule femminili somatiche.
+
+Osservazioni successive: tutti i nuclei interfasici di cellule somatiche normali di femmine di mammifero presentano un corpo di Barr.
+Storicamente lo studio delle patologie avviene almeno 10-15 anni dopo, viene dopo ma è correlato al corpo di Barr. All’epoca lo studio delle patologie era fatto principalmente sull’uomo.
+I riarrangiamenti del cromosoma X sono molto frequenti ma nella maggior parte dei casi hanno un blando effetto fenotipico. Si parla di anomalie strutturali, traslocazioni, piccole delezioni e via dicendo. Queste possono influenzare un poco lo sviluppo, ma non sono anomalie clinicamente rilevanti. In alcuni casi possono influenzare la fertilità, ma non sono patologie gravi e quindi sono anomalie frequenti perché sono compatibili con la vita. Se facciamo un’analisi delle anomalie dei cromosomi del sesso nell’uomo, vediamo che c’è una correlazione tra il numero di corpi di barr ed il numero di cromosomi x attivi. Questa è la regola dell’N1. Il numero di corpi di barr è tale da mantenere attivo un solo cromosoma x. Ci riferiamo ai casi di trisomie, tetrasomie e addirittura pentasomie X. Sono femmine normali che hanno un lieve ritardo mentale in alcuni casi e sono femmine che hanno un’alta probabilità di avere figli con la sindrome di Klinefelter, -perché può segregare in un gamete più di un cromosoma X (Klinefelter: cariotipo 47-XXY). Anche in femmine con pentaX avremo femmine con corpi di Barr e un solo cromosoma x attivo.  
+Nella sindrome di Turner il cariotipo è X0. Se io guardo la cromatina sessuale in un individuo che ha la sindrome di Klinefelter ne avrà una di tipo femminile, perché un x è inattivo. Se faccio la cromatina sessuale in una femmina Turner l’avrà di tipo maschile, perché non avrà il corpo di Barr. Nella diagnosi prenatale per la determinazione del sesso si analizzava la cromatina sessuale, una situazione come quella della sindrome di Turner o Klinefelter sfuggiva alle analisi, risultava una femmina o un maschio normale.
+In presenza di anomalie strutturali del cromosoma X viene preferenzialmente inattivato il cromosoma X riarrangiato. 
+Questo è molto utile perché se ho una femmina con un cromosoma X deleto e quello viene inattivato avrò una femmina con un Turner parziale (è un fenotipo molto vicino a quello normale), mentre se venisse inattivato l’X normale si avrebbe una grave patologia. È evidente che la cosa sia biologicamente utile. L’inattivazione normalmente è casuale, ma perché in questi casi non è così? Dobbiamo pensare a un meccanismo di selezione darwiniana: i soggetti con questa patologia che inattivano l’X riarrangiato crescono meglio e di conseguenza hanno maggiori possibilità di riprodursi. Per cui l’inattivazione avviene a caso ma poi c’è una selezione in positivo tra quelle che hanno inattivato l’X normale e quelle che hanno inattivato l’X riarrangiato.
+
+Analisi ulteriori vengono fatte dalla signora RUSSEL nel 1950: analisi fenotipica di femmine di topo, tramite costruzione di traslocazioni ad hoc di geni che determinano il colore del mantello sul cromosoma X (il risultato erano femmine con il fenotipo del mantello variegato, a chiazze). Se i geni sono traslocati sull’X e l’inattivazione è casuale, a seconda dell’X inattivato l’animale avrà un colore diverso del mantello.
+Questa è un’evidenza indiscutibile del fatto che uno dei due cromosomi X viene inattivato nelle cellule somatiche e ci dice che l’inattivazione è casuale infatti il mantello risulta a chiazze, perché in ogni cellula può essere inattivato l’uno o l’altro cromosoma a caso.
+Non solo, ma che tutta la progenie mitotica (ho una chiazza, una regione di cellule epidermiche) ha una sorta di memoria cellulare. Una volta fatta la scelta tutta la progenie mitotica avrà sempre quel cromosoma X inattivo. Questa evidenza viene da esperimenti banali su riarrangiamenti cromosomici. 
+Un altro esempio è quello dei GATTI TARTARUGA o gatti calico e di femmine di topo eterozigoti. Femmine di gatti calico che sono eterozigoti per un gene legato all’x (non è una traslocazione come nel caso della Russel) che determina il colore del mantello sono a chiazze. Ovviamente, se guardiamo la progenie di queste femmine, i maschi non risultano mai a chiazze ma abbiamo un 50\% di maschi con il pelo di un colore e un 50\% dell’altro.
+L’IPOTES DI MARY LYON è la sintesi di tutto quello che abbiamo detto:
+CARATTERI LEGATI AL SESSO MOSTRANO VARIEGAZIONE O MOSAICISMO SOMATICO NELLE CELLULE SOMATICHE DELLE FEMMINE ETEROZIGOTI.
+    • La compensazione del dosaggio nei mammiferi avviene attraverso l’inattivazione di uno dei cromosomi X presenti nelle femmine
+    • Si ottiene in questo modo l’equivalenza funzionale dei geni posti sul cromosoma X nei maschi e nelle femmine
+    • Può essere inattivato a caso l’X materno o quello paterno (ci sono eccezioni all’inattivazione casuale già citate)
+    • L’inattivazione, nel topo, avviene in uno stadio precoce dello sviluppo embrionale (5 gg dopo la fecondazione nel topo, nell’uomo avviene dopo più tempo)
+    • L’inattivazione viene ereditata somaticamente: le cellule derivate per mitosi da una cellula con inattivato l’X materno hanno sempre inattivato l’X materno, le cellule derivate per mitosi da una cellula con inattivato l’X paterno hanno sempre inattivato l’X paterno: questa si chiama MEMORIA CELLULARE. Ciò spiega il mosaicismo.
+
+I nodi sono quindi: mosaicismo somatico, inattivazione casuale, l’inattivazione avviene precocemente, e viene ereditata somaticamente.
+
+Le evidenze citologiche sono il corpo di barr e il numero di corpi di Barr in cariotipi anormali.
+Il cromosoma X inattivo, a causa della sua ipercondensazione, è l’ultima regione del genoma che si replica durante la fase S. Il corpo di barr viene chiamato anche iX (inactive X) o lX (late X).
+Questo si vede bene con l’incorporazione di trizio o bromodesossi uridina in fase S, un tracciante che si vede bene o con anticorpi o colorazioni differenziali.
+Facendo l’incorporazione di timidina poi con autoradiografia si vede che il cromosoma x incorpora
+molto più trizio rispetto a tutti gli altri (perché è l’ultimo che si replica appunto), e sarà molto nero.
+Per l’incorporazione con BrdU ci sono delle colorazioni particolari, che permettono di evidenziare le regioni che hanno incorporato BrdU.
+Vediamo la relazione tra cariotipo e presenza di marcatore citologico dell’inattivazione del cromosoma X; e lo vediamo sia come cromosomi che formano il corpo di Barr ma anche come cromosomi che sono a replicazione tardiva. Naturalmente in un cariotipo femminile normale abbiamo un corpo di Barr e un cromosoma x late replicating, in cariotipi maschili normali non abbiamo né uno né l’altro. In un fenotipo Turner (X0) abbiamo una situazione identica a quella di un cariotipo maschile normale. In un fenotipo Klinefelter abbiamo una cromatina sessuale di tipo femminile e lo stesso riguarda il late X. Poi c’è la regola dell’N-1. Abbiamo situazioni in cui un maschio klinefelter ha due cromosomi Y, ma la sua cromatina sessuale sarà identica a quella del primo maschio con 47 cromosomi (xxy). Abbiamo una femmina con triplo x, due corpi di Barr e due late x. Al terzo rigo c’è invece un maschio con triplo x che ha la stessa cromatina della femmina. 
+iX E’ UNIFORMEMENTE SCURO AL BANDEGGIO GBG
+iX E’ UNIFORMEMENTE CHIARO AL BANDEGGIO RBG
+
+
+
+È interessante quando abbiamo dei riarrangiamenti: se abbiamo un x riarrangiato, in cui ad esempio c’è una delezione, abbiamo un corpo di barr piccolo. Se andiamo a guardare quello che si replica tardivamente è proprio l’x deleto. Nel caso di un riarrangiamento in cui c’è un cromosoma x normale e un isocromosoma xq: un cromosoma x non è normale perché è costituito da due bracci lunghi, quindi è più grande di un cromosoma x normale. Quello che viene inattivato è il cromosoma x con due bracci lunghi e il corpo di Barr è più grande. Se guardiamo il late replicating è l’isocromosoma del braccio lungo.
+
+
+
+STUDIO DI MARCATORI GENETICI
+Con tecniche di carattere biochimico vado a vedere cosa succede quando abbiamo delle varianti elettroforetiche di un enzima che si trova sul cromosoma x, la G6PD. Lo vediamo nel siero di femmine eterozigoti.
+Altro esempio è la displasia ectodermica anidrotica, una brutta malattia che determina l’ostruzione dei pori: è letale nei maschi, le femmine eterozigoti sono vitali ma hanno dei problemi e soprattutto le zone dell’epidermide dove c’è ostruzione dei pori formano delle chiazze, dove non essendoci scambio con l’esterno sono cheratinizzate, hanno un aspetto diverso dal resto del corpo. Abbiamo un fenotipo variegato, un po' come il mantello a chiazze. Sono femmine eterozigoti per questa mutazione e quindi è evidente, se guardiamo il corpo di queste femmine, che ci sono delle chiazze anidrotiche e delle chiazze normali, a seconda che sia stato inattivato l’x mutante o quello normale. 
+Se guardiamo ovviamente il siero di femmine eterozigoti per la G6PD evidentemente si esprimeranno entrambe le varianti elettroforetiche.
+Introduciamo i meccanismi di inattivazione che poi descriveremo meglio.
+Per studiare il meccanismo di inattivazione dobbiamo tener presente che il cromosoma x è eterocromatico e fortemente condensato, è eterocromatina facoltativa. Il processo di condensazione della cromatina è una sorta di cristallizzazione: a partire da un sito di nucleazione la condensazione diffonde ai due lati di questo nucleo di inizio della eterocromatizzazione. Questo è stato ben dimostrato nella drosophila con lo studio del fenomeno di VARIEGAZIONE PER EFFETTO DI POSIZIONE: quando si ha un centro eterocromatico, siccome l’eterocromatizzazione diffonde a partire da questo punto di inizio, possiamo considerare dei marcatori sempre più lontani dalla zona dove è iniziata l’attivazione. Se sono molto vicini al centro di inattivazione, questi geni sono inattivi, più ci allontaniamo e meno probabile è che siano inattivi: sono inattivi in alcune cellule e attivi in altre. Se poi andiamo molto lontani sono sempre attivi. E questa è la variegazione per effetto di posizione, più ci allontaniamo maggiore è la variegazione. Lo studio di questo fenomeno ha permesso di stabilire che il meccanismo di inattivazione per eterocromatizzazione avviene come una cristallizzazione a partire da un centro di inattivazione. Questa è una nozione importante perché il cromosoma x è molto grande: esiste un solo centro di inattivazione o tanti diffusi lungo il cromosoma? Dovremmo parlare dell’innesco, come avviene la diffusione di questo e come avviene il mantenimento, e cioè la memoria cellulare. 
+
+
+
 
 
 
